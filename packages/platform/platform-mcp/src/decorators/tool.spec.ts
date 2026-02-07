@@ -1,7 +1,7 @@
 import {DITest, inject, Injectable} from "@tsed/di";
 import {CollectionOf, Description, Property, Returns} from "@tsed/schema";
 
-import {Tool} from "../..";
+import {Tool} from "./tool.js";
 
 class Model {
   @Property()

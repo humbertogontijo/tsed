@@ -13,7 +13,7 @@ export class PlatformMcpModule implements OnRoutesInit {
   protected server = inject<McpServer>(MCP_SERVER);
 
   $onRoutesInit() {
-    if (this.settings?.enabled) {
+    if (this.isEnabled()) {
       const path = this.settings?.path || "/mcp";
 
       this.app.post(
@@ -51,6 +51,10 @@ export class PlatformMcpModule implements OnRoutesInit {
     } finally {
       await transport.close();
     }
+  }
+
+  private isEnabled() {
+    return this.settings?.enabled !== false;
   }
 }
 

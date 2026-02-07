@@ -1,7 +1,7 @@
 import {DITest, inject, Injectable} from "@tsed/di";
 import {Description, Title} from "@tsed/schema";
 
-import {Prompt} from "../..";
+import {Prompt} from "./prompt.js";
 
 @Injectable()
 export class TestPrompt {
@@ -22,7 +22,7 @@ describe("Prompt", () => {
       propertyKey: "prompt",
       token: TestPrompt,
       name: "prompt",
-      title: "title",
+      title: "Title",
       description: "Description",
       handler: expect.any(Function)
     });

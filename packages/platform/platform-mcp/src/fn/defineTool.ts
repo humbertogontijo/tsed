@@ -74,6 +74,7 @@ export function defineTool<Input, Output = undefined>(options: ToolProps<Input, 
 
       return {
         ...opts,
+        name: opts.name,
         inputSchema: toZod(isArrowFn(opts.inputSchema) ? opts.inputSchema() : opts.inputSchema),
         outputSchema: toZod(opts.outputSchema),
         async handler(args: Input, extra: RequestHandlerExtra<ServerRequest, ServerNotification>) {

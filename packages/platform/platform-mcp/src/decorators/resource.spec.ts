@@ -1,7 +1,7 @@
 import {DITest, inject, Injectable} from "@tsed/di";
 import {ContentType, Description, Title} from "@tsed/schema";
 
-import {Resource} from "../..";
+import {Resource} from "./resource.js";
 
 @Injectable()
 export class TestResource {
